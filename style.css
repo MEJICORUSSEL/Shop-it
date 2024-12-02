@@ -1,0 +1,468 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210120/pngtree-brick-wall-with-red-background-image_536828.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Make sure the body covers the entire viewport */
+    margin: 0; /* Remove default margins */
+    color: #333;
+    overflow: hidden;
+  }
+
+  .bg{
+    background-position: 50vh;
+  }
+  
+  
+  
+  .cons .logo {
+    padding: -10rem 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+  }
+  
+ .cons .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: -2rem;
+  }
+  
+  .cons .logo h1 {
+    position: relative;
+    color: #726917;
+    font-size: 1.5rem;
+    text-shadow: #170b0b;
+    left: 35px;
+    height: 46px;
+  }
+  
+  main {
+    padding: -2rem;
+  }
+  
+  .product-list {
+    max-width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: rgb(121, 80, 10);
+  }
+  
+  .product-list h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    overflow-y: auto;
+    max-height: 70vh;
+  }
+  
+  .product-card {
+    width: calc(20.33% - 1rem); /* Default size for medium screens */
+    box-sizing: border-box;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  
+  .product-card h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+  
+  .product-card p {
+    font-size: 1.2rem;
+    color: #27ae60;
+  }
+  
+    
+  /* Popup */
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents background scrolling */
+  z-index: 1000;
+  
+  
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%; /* Adjust to make it responsive */
+  max-width: 500px; /* Set a max width */
+  max-height: 80vh; /* Limit height to viewport size */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content img {
+  width: 100%; /* Ensures images scale properly */
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.popup-content h3,
+.popup-content p {
+  margin-bottom: 1rem;
+  word-wrap: break-word; /* Ensures text wraps properly */
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 80px;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.buy-btn {
+  background-color: #27ae60;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Header with Basket Icon */
+.cons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fefefe;
+  padding: 1rem 2rem;
+}
+
+.basket {
+  position: relative;
+  cursor: pointer;
+}
+
+.basket img {
+  width: 30px;
+  height: 30px;
+}
+
+#basket-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+}
+
+/* Basket Popup */
+.basket-popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.basket-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 700px; /* Responsive width */
+  
+  max-height: 80vh; /* Restrict height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  position: relative;
+  
+}
+
+.basket-content h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.basket-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.basket-content ul li {
+  margin: 1rem 0; /* Increase the margin between items */
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem; /* Add some padding to increase the space inside each list item */
+  border-bottom: 1px solid #ddd;
+}
+
+
+.basket-content ul li span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.remove-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Close Button */
+.basket-content .cancel-btn {
+  margin-top: 1rem;
+  background-color: #888;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.basket-content .cancel-btn:hover {
+  background-color: #555;
+}
+
+.com{
+  position: relative;
+  background-color: #f8f8f5;
+  display: flex;
+  max-width: 1400px;
+  height: 60px;
+  bottom: 25px;
+  align-items: center;
+  justify-content: center;
+  top: -16px;
+  
+}
+/* Form Popup Styling */
+.form-popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popup-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.form-content {
+  background: #e9e5e5;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  color: black;
+}
+
+.form-content h2 {
+  margin-bottom: 1rem;
+  color: #170b0b;
+}
+
+.form-content label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  text-align: left;
+  color: #170b0b;
+}
+
+.form-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #170b0b;
+}
+
+.form-content button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #170b0b;
+}
+
+.form-content button:hover {
+  background-color: #ddd;
+}
+
+.auth-buttons button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.7rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(225, 171, 7);
+}
+
+.auth-buttons button:hover {
+  background-color: #faf8f7;
+}
+/* Profile Icon */
+.profile {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.profile-icon {
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* Profile Modal */
+.profile-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.profile-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.profile-content h2 {
+  margin-bottom: 1rem;
+}
+
+.profile-content label {
+  display: block;
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.profile-content input, .profile-content textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-content button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-content button:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  /* For tablets and smaller screens */
+  .product-card {
+    width: calc(50% - 1rem); /* Two cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile screens */
+  .product-card {
+    width: 100%; /* One card per row */
+  }
+  .popup-content {
+    width: 90%; /* Make popups more responsive */
+    max-width: none; /* Remove max-width limit */
+  }
+  .basket-content {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .product-card h3 {
+    font-size: 1.2rem; /* Adjust title size */
+  }
+
+  .product-card p {
+    font-size: 1rem; /* Adjust price size */
+  }
+}

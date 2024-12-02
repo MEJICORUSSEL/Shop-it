@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pic.png" type="image/x-icon">
+    <title>Shop-IT</title>
+</head>
+<body   class="bg"  style="background-image: url(https://intdesigners.com/wp-content/uploads/2024/04/Living-room-luxury-home-interior-design.webp);">
+
+    <header class="cons">
+      <div class="logo">
+         <a href='https://mandauefoam.ph/?gad_source=1&gclid=Cj0KCQiAr7C6BhDRARIsAOUKifgbnANxVp4dvBSvwybxfB0VugiNMyz7Mh02Rz3AZU_AfdyiKGkT77waAr-yEALw_wcB' target="_blank">
+ <img src="pic.png" alt="Shop Logo">  </a>
+        <h1>Shop-IT</h1>
+      </div>
+      <!-- Profile Icon in the Header -->
+<div class="profile" onclick="openProfileModal()">
+  <img src="prr-removebg-preview.png" alt="Profile Icon" class="profile-icon">
+  
+</div>
+
+<!-- Profile Modal -->
+<div class="profile-modal" id="profile-modal">
+  <div class="profile-content">
+    <h2>Edit Profile</h2>
+    <form id="profile-form">
+      <label for="profile-username">Username:</label>
+      <input type="text" id="profile-username" required>
+      
+      <label for="profile-age">Age:</label>
+      <input type="number" id="profile-age" required>
+      
+      <label for="profile-location">Location:</label>
+      <input type="text" id="profile-location" required>
+      
+      <label for="profile-dob">Date of Birth:</label>
+      <input type="date" id="profile-dob" required>
+      
+      <label for="profile-bio">Bio:</label>
+      <textarea id="profile-bio" rows="4" required></textarea>
+
+      <button type="button" onclick="saveProfile()">Save Changes</button>
+      <button type="button" onclick="closeProfileModal()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+      <div class="basket" onclick="showBasket()">
+        <img src="bas.png" alt="Basket Icon">
+        <span id="basket-count">0</span>
+      </div>
+    </header>
+    <main>
+      <section class="product-list">
+        <br>
+        <h2>Our Products</h2>
+        <div class="products">
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay upadusihdshdjhd jdhjhdgfhdf fjdjfdjgfgf', '₱500.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>₱500.00</p>
+          </div>            
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis Ito ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangis Ito ay upuan ng mabangis Ito ay upuan ng mabangis Ito ay upuan ng mabangis Ito ay upuan ng mabangis Ito ay upuan ng mabangis Ito ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangisIto ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+          <div class="product-card" onclick="openPopup('Upuan ng Mamay', '$10.00', 'Ito ay upuan ng mabangis', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_Jh7mZx021aHPvY0iqMvsvIVxfeillH6Ig&s" alt="Product 1">
+            <h3>Upuan ng Mamay</h3>
+            <p>$10.00</p>
+          </div> 
+
+        </div>
+      
+          
+          <!-- Popup Section -->
+          <div class="popup" id="popup">
+            <div class="popup-content">
+              <img id="popup-image" src="" alt="Product Image" style="width: 100%; height: auto; margin-bottom: 1rem;">
+  <h3 id="popup-title"></h3>
+  <p id="popup-description"></p>
+  <p id="popup-price"></p>
+  <button class="btn buy-btn" onclick="addToBasket()">Buy</button>
+  <button class="btn cancel-btn" onclick="closePopup()">Cancel</button> 
+            </div>
+          </div>
+          
+          <div class="basket-popup" id="basket-popup">
+            <div class="basket-content">
+              <h3>Your Basket</h3>
+              <ul id="basket-items">
+                <!-- Example item -->
+                <li>
+                  <span>Product Name</span>
+                  <button class="remove-btn" onclick="removeItem(this)">Remove</button>
+                </li>
+              </ul>
+              <button class="btn cancel-btn" onclick="closeBasket()">Close</button>
+            </div>
+          </div>
+          
+
+<!-- Sign-Up Form -->
+<div class="form-popup" id="signup-form">
+  <div class="form-content">
+    <h2>Sign Up</h2>
+    <form id="signup">
+      <label for="signup-username">Username</label>
+      <input type="text" id="signup-username" required>
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" required>
+      <button type="button" onclick="registerUser()">Sign Up</button>
+      <button type="button" onclick="closeForm('signup-form')">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<!-- Log-In Form -->
+<div class="form-popup" id="login-form">
+  <div class="form-content">
+    <h2>Log In</h2>
+    <form id="login">
+      <label for="login-username">Username</label>
+      <input type="text" id="login-username" required>
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" required>
+      <button type="button" onclick="loginUser()">Log In</button>
+      <button type="button" onclick="closeForm('login-form')">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<!-- Add Log In and Sign Up Buttons in the Header -->
+<header class="com">
+  <div class="auth-buttons">
+    <button onclick="openForm('signup-form')">Sign Up</button>
+    <button onclick="openForm('login-form')">Log In</button>
+  </div>
+</header>
+
+
+  <script src="script.js"></script>
+  </body>
+  </html>
